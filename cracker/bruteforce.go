@@ -53,7 +53,7 @@ func BruteForceAttack(targetHash, hashType, charset string, minLen, maxLen, numW
 		}
 		totalCombinations += combos
 	}
-	fmt.Printf("  [📊] Espaço de busca: %d combinações\n\n", totalCombinations)
+	fmt.Printf("  [] Espaço de busca: %d combinações\n\n", totalCombinations)
 
 	// Inicia os workers
 	for i := 0; i < numWorkers; i++ {
@@ -80,7 +80,7 @@ func BruteForceAttack(targetHash, hashType, charset string, minLen, maxLen, numW
 				current := atomic.LoadInt64(&attempts)
 				if current%100000 == 0 {
 					progress := float64(current) / float64(totalCombinations) * 100
-					fmt.Printf("\r\033[K  [⏳] %d/%d tentativas (%.1f%%)", current, totalCombinations, progress)
+					fmt.Printf("\r\033[K  [] %d/%d tentativas (%.1f%%)", current, totalCombinations, progress)
 				}
 			}
 		}()
@@ -93,7 +93,7 @@ func BruteForceAttack(targetHash, hashType, charset string, minLen, maxLen, numW
 				break
 			}
 
-			fmt.Printf("  [🔨] Testando comprimento: %d\n", length)
+			fmt.Printf("  [] Testando comprimento: %d\n", length)
 
 			// Gera combinações de forma iterativa usando "contagem" em base N
 			// onde N = tamanho do charset

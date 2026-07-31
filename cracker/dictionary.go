@@ -77,7 +77,7 @@ func DictionaryAttack(targetHash, hashType, wordlistPath string, numWorkers int)
 				// Exibe progresso a cada 100.000 tentativas
 				current := atomic.LoadInt64(&attempts)
 				if current%100000 == 0 {
-					fmt.Printf("\r\033[K  [⏳] %d senhas testadas...", current)
+					fmt.Printf("\r\033[K  [] %d senhas testadas...", current)
 				}
 			}
 		}()
