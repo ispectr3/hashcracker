@@ -1,0 +1,27 @@
+# Binários compilados
+hashcracker
+hashcracker.exe
+*.exe
+
+# Diretórios de build
+/build/
+/dist/
+
+# Resultados
+results/
+*.csv
+*.json
+
+# Arquivos temporários
+*.tmp
+*.log
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
