@@ -17,7 +17,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kaique/hashcracker-go/cracker"
+	"github.com/ispectr3/hashcracker/cracker"
 )
 
 // Cores ANSI para output no terminal
